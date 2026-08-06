@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boom Store | FAQ</title>
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/o5roajpu/image/upload/v1785982470/icono_aocck4.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> <!-- Font Awesome 6.4.2 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- AOS Animation CSS (Opcional, para animaciones en scroll) -->
+    
+    <!-- Custom CSS (Aquí van tus variables y reseteos globales) -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/preload.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/catalogo-banner.css">
+    <link rel="stylesheet" href="css/faq-cuerpo.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+    
+    <!-- ========================================================================================
+                                   PANTALLA DE CARGA (PRELOADER)
+    =========================================================================================--> 
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <!-- Recuerda poner la ruta correcta de tu logo aquí -->
+            <img src="img/preload.webp" alt="Cargando Boom Store..." class="preloader-logo">
+        </div>
+    </div>
+
+    <!-- ========================================================================================
+                                       HEADER
+    =========================================================================================--> 
+    <header class="sticky-top" style="z-index: 1050;">
+        <!-- ==================== BARRA SUPERIOR ==================== -->
+        <div class="top-header py-3">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- Logo -->
+                    <div class="col-md-4 d-flex justify-content-center justify-content-md-start mb-3 mb-md-0">
+                        <a href="index.html" class="custom-logo-link">
+                            <img src="https://res.cloudinary.com/o5roajpu/image/upload/v1785385224/logo-nombre_asvvgn.png" alt="Logo Boom Store" class="img-fluid logo-img">
+                        </a>
+                    </div>
+                    <!-- Buscador Minimalista -->
+                    <div class="col-md-5 mb-md-0 d-flex justify-content-center">
+                        <div class="search-bar position-relative w-100" style="max-width: 450px;">
+                            <input type="text" class="form-control custom-search-input py-2 pe-5" placeholder="¿Qué polo épico buscas hoy?">
+                            <button type="submit" class="btn border-0 position-absolute end-0 top-0 h-100 pe-2 text-muted search-btn">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Redes Sociales (Desktop) -->
+                    <div class="col-md-3 d-none d-md-flex justify-content-md-end align-items-center">
+                        <div class="social-links d-flex gap-4">
+                            <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                            <a href="#" class="social-icon" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== BARRA DE NAVEGACIÓN ==================== -->
+        <nav class="navbar navbar-expand-lg bg-nav-custom" id="mainNavbar">
+            <div class="container-fluid px-0">
+                <!-- Botón Hamburguesa (Móvil) -->
+                <button class="navbar-toggler m-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bottomNav"><span class="navbar-toggler-icon"></span></button>
+                <!-- Menú Lateral (Offcanvas) -->
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="bottomNav">
+                    <!-- Botón de cerrar FLOTANTE CENTRADO VERTICALMENTE -->
+                    <button type="button" class="custom-close-btn border-0" data-bs-dismiss="offcanvas" aria-label="Cerrar"><i class="fa-solid fa-angle-left"></i></button>
+                    <!-- Cabecera del menú lateral (Logo Móvil) -->
+                    <div class="offcanvas-header justify-content-between px-4 pt-4">
+                        <a href="index.html" class="d-inline-block">
+                            <img src="https://res.cloudinary.com/o5roajpu/image/upload/v1785385224/logo-nombre_asvvgn.png" alt="Logo Boom Store" class="img-fluid" style="max-height: 65px;">
+                        </a>
+                    </div>
+                    <!-- Cuerpo del menú -->
+                    <div class="offcanvas-body p-0 p-lg-2 d-flex flex-column">
+                        <!-- Lista de navegación -->
+                        <ul class="navbar-nav gap-0 gap-lg-4 text-start text-lg-center w-100 justify-content-center">
+                            <li class="nav-item"><a class="nav-link fw-bold custom-nav-link" href="index.html">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link fw-bold custom-nav-link" href="catalogo.html">Polos</a></li>
+                            <li class="nav-item"><a class="nav-link fw-bold custom-nav-link" href="catalogo.html">Tazas</a></li>
+                            <li class="nav-item"><a class="nav-link fw-bold custom-nav-link" href="catalogo.html">Boom Duo</a></li>
+                            <li class="nav-item"><a class="nav-link fw-bold custom-nav-link" href="catalogo.html">Otros</a></li>
+                            <li class="nav-item"><a class="nav-link fw-bold custom-nav-link" href="nosotros.html">Nosotros</a></li>
+                            <li class="nav-item"><a class="nav-link fw-bold custom-nav-link" href="preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+                            <li class="nav-item"><a class="nav-link fw-bold custom-nav-link" href="contacto.html">Contactanos</a></li>
+                        </ul>
+                        <!-- Redes sociales empujadas al fondo (Móvil) -->
+                        <div class="offcanvas-social d-flex justify-content-center gap-5 py-4 mt-auto w-100">
+                            <a href="#" class="mobile-social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="mobile-social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="mobile-social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                            <a href="#" class="mobile-social-icon" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- ========================================================================================
+                                   BANNER DEL FAQ
+        =========================================================================================--> 
+        <section class="catalogo-hero position-relative">
+            <!-- IMAGEN ADMINISTRABLE -->
+            <!-- Cuando uses PHP, aquí inyectarás la variable con la ruta de tu base de datos -->
+            <img src="https://res.cloudinary.com/o5roajpu/image/upload/v1785986438/banner-catalogo_ivrqvb.png" alt="Banner Catálogo" class="catalogo-hero-img w-100">
+            <!-- GRADIENTE OSCURO (Protege la lectura del texto en imágenes claras) -->
+            <div class="catalogo-hero-overlay"></div>
+            <!-- CONTENEDOR DEL TEXTO (Alineado abajo a la izquierda) -->
+            <!-- Usamos 'w-100' para ocupar todo el ancho, pero 'container' para mantener el margen lateral alineado con el resto de la página -->
+            <div class="position-absolute bottom-0 start-0 w-100 pb-4 pb-md-5">
+                <div class="container">
+                    <!-- Mantenemos el estilo de tu marca: mayúsculas, negrita y espaciado -->
+                    <h1 class="catalogo-hero-title text-white m-0" data-aos="fade-up">
+                        Preguntas Frecuentes
+                    </h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================================
+                               CUERPO DEL FAQ
+        =========================================================================================--> 
+        <section class="faq-cuerpo py-5 bg-white">
+            <div class="container" data-aos="fade-up">
+                
+                <div class="accordion custom-accordion" id="faqAccordion">
+                    
+                    <!-- PREGUNTA 1 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#col1" aria-expanded="true">
+                                ¿Cómo realizan los estampados de los polos y poleras?
+                            </button>
+                        </h2>
+                        <!-- show indica que esta pestaña empieza abierta -->
+                        <div id="col1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                El estampado de nuestros polos y poleras se realiza mediante impresión DTF, técnica en la cual se aplica la tinta sobre un film textil PET, al que se le aplica posteriormente un pegamento y poder adherir el diseño a las fibras del polo o polera mediante calor.<br><br>
+                                Esta técnica nos permite realizar diseños más complejos y detallados, permitiendo una calidad igual a técnicas como el DTG, y calidad superiores al del Vinilo Textil y Serigrafia tradicional.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PREGUNTA 2 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#col2" aria-expanded="false">
+                                ¿Con qué tallas trabajan y cuáles son sus medidas?
+                            </button>
+                        </h2>
+                        <div id="col2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Nosotros trabajamos con tallas desde S hasta XL. Todas nuestras poleras son Algodón Jersey.<br><br>
+                                Nuestra tabla de tallas la puedes encontrar aquí: <a href="#link-a-tallas" class="text-danger fw-bold text-decoration-none">TABLA DE TALLAS</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PREGUNTA 3 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#col3" aria-expanded="false">
+                                ¿Tienen tienda física?
+                            </button>
+                        </h2>
+                        <div id="col3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                No, somos una tienda 100% online, lo que nos permite llegar a todos los rincones del país y no tener que hacer gastos de arriendo de local y cosas así. En un futuro puede que hayan novedades al respecto.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PREGUNTA 4 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#col4" aria-expanded="false">
+                                ¿Por qué comprar en Boom Store?
+                            </button>
+                        </h2>
+                        <div id="col4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Te garantizamos entregarte productos de calidad a los mejores precios, con las mejores ofertas que existen actualmente. Como nosotros controlamos todo el proceso desde elegir las mejores telas hasta entregar el producto, puedes confiar que siempre vamos a ofrecerte los mejores productos y más duraderos.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PREGUNTA 5 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#col5" aria-expanded="false">
+                                ¿Cómo puedo comprar?
+                            </button>
+                        </h2>
+                        <div id="col5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Trabajamos de forma online donde puedes pagar usando tanto YAPE, PLIN como transferencia bancaria desde BCP, Scotiabank, Interbank o cualquier otro. Además ofrecemos envíos a todas las provincias por medio de OLVA o SHALOM, con las facilidades de pago respectivas.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PREGUNTA 6 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#col6" aria-expanded="false">
+                                ¿Puedo personalizarlo con alguna imagen o foto?
+                            </button>
+                        </h2>
+                        <div id="col6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                ¡Claro que sí! Debido a nuestra capacidad con DTF es posible hacer cualquier diseño o fotografía y poder personalizar polos y poleras, además de poder personalizarlo con el nombre o frase que desees. Puedes hacer tu pedido por Facebook o WhatsApp.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PREGUNTA 7 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#col7" aria-expanded="false">
+                                ¿Los polos son para hombres y mujeres?
+                            </button>
+                        </h2>
+                        <div id="col7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Sí, las sudaderas son unisex, con tallas que son adecuadas tanto para hombres y mujeres.
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <!-- Cierre del Acordeón -->
+                <div class="text-center mt-5" data-aos="fade-up">
+                    <p class="text-muted mb-3" style="font-size: 1.05rem;">¿Aún tienes dudas o tu pregunta no aparece aquí?</p>
+                    <!-- Botón de WhatsApp -->
+                    <a href="https://wa.me/51998255450?text=Hola%20Boom%20Store,%20tengo%20una%20consulta" target="_blank" class="btn btn-dark rounded-pill px-5 py-2 fw-bold text-uppercase shadow-sm d-inline-flex align-items-center justify-content-center gap-2" style="letter-spacing: 1px; transition: transform 0.3s ease;">
+                        <!-- Usando el icono de WhatsApp (Si usas FontAwesome cambia esta línea por <i class="fa-brands fa-whatsapp fs-4"></i>) -->
+                        <i class="ph ph-whatsapp-logo" style="font-size: 1.5rem;"></i>
+                        Escríbenos
+                    </a>
+                </div>
+            </div> <!-- Cierre del Container -->
+        </section> <!-- Cierre de la Sección -->
+
+        
+    </main>
+
+    <!-- ========================================================================================
+                                   FOOTER (PIE DE PÁGINA)
+    =========================================================================================--> 
+    <footer class="custom-footer py-4">
+        <div class="container">
+            <!-- Alineamos verticalmente al centro y centramos el texto por defecto para móviles -->
+            <div class="row align-items-center text-center">
+                <!-- COLUMNA IZQUIERDA: Logo -->
+                <!-- text-md-start empuja el logo a la izquierda solo en computadoras -->
+                <div class="col-12 col-md-4 text-center text-md-start mb-4 mb-md-0">
+                    <a href="index.html" class="d-inline-block">
+                        <img src="https://res.cloudinary.com/o5roajpu/image/upload/v1785385327/logo-2_vcjntw.png" alt="Dark Store Logo" class="footer-logo img-fluid">
+                    </a>
+                </div>
+                <!-- COLUMNA CENTRAL: Enlaces y Copyright -->
+                <div class="col-12 col-md-4 mb-4 mb-md-0">
+                    <!-- Navegación -->
+                    <div class="footer-nav mb-3">
+                        <a href="index.html">Inicio</a> <span class="separator">|</span>
+                        <a href="nosotros.html">Nosotros</a> <span class="separator">|</span>
+                        <a href="preguntas-frecuentes.html">FAQ</a> <span class="separator">|</span>
+                        <a href="contacto.html">Contactanos</a>
+                    </div>
+                    <!-- Textos -->
+                    <p class="footer-copy mb-1">© 2026 Boom Store. Todos los derechos reservados.</p>
+                    <p class="footer-credits mb-0">
+                        Hecho con <i class="fa-solid fa-heart accent-heart"></i> por <span class="accent-text">NavitoSc</span>
+                    </p>
+                </div>
+                <!-- COLUMNA DERECHA: Redes Sociales (Botones circulares) -->
+                <!-- text-md-end empuja los botones a la derecha solo en computadoras -->
+                <div class="col-12 col-md-4 text-md-end">
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================================================================
+                                   SCRIPTS AL FINAL DEL BODY
+    =========================================================================================--> 
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script src="js/preload.js"></script>
+</body>
+</html>
