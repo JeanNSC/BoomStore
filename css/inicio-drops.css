@@ -1,0 +1,272 @@
+/* ==========================================================================
+   SECCIÓN NUEVO INGRESO (CABECERA)
+   ========================================================================== */
+
+.new-drops-section {
+    background-color: #ffffff;
+}
+
+.new-drops-title {
+    border-left: 5px solid #0F9D8A; /* Barra de color a la izquierda */
+    padding-left: 12px; /* Separación entre la barra y el texto */
+    line-height: 1.1;
+}
+
+.new-drops-btn {
+    background-color: #0F9D8A; /* El color verde esmeralda/teal de tu imagen */
+    color: #ffffff !important; /* Texto blanco */
+    border: none; /* Quitamos cualquier borde */
+    border-radius: 0; /* Bordes completamente rectos */
+    padding: 9px 32px; /* Más espacio a los lados para que se vea rectangular */
+    font-size: 0.95rem;
+    font-weight: 600; /* Letra gruesa como en la imagen */
+    letter-spacing: 2px; /* Letras separadas */
+    transition: all 0.3s ease;
+}
+
+.new-drops-btn:hover {
+    background-color: #0C8272; /* Un verde un poco más oscuro al pasar el mouse */
+    color: #ffffff;
+    transform: translateY(-2px); /* Se levanta un poquito */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Sombra suave para darle volumen */
+}
+
+.new-drops-btn:active {
+    transform: translateY(0) scale(0.96);
+    box-shadow: none;
+}
+
+.products-slider {
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory; 
+    padding-bottom: 20px; 
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.products-slider::-webkit-scrollbar {
+    display: none;
+}
+
+.product-card {
+    flex: 0 0 250px; /* Ancho fijo para celular */
+    scroll-snap-align: center; 
+}
+
+.product-img-wrapper {
+    background-color: transparent; /* Quitamos el fondo gris extra para que no estorbe con el fondo de tus fotos */
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+    overflow: hidden; /* Asegura que la imagen no se salga de los bordes redondeados */
+}
+
+.img-hover-swap {
+    display: block;
+    position: relative;
+}
+
+.primary-img {
+    width: 100%;
+    height: auto; /* La altura se adapta automáticamente a tu foto real */
+    object-fit: cover;
+    transition: opacity 0.4s ease-in-out; 
+}
+
+.secondary-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Copia la altura exacta de la imagen principal */
+    object-fit: cover;
+    opacity: 0; 
+    transition: opacity 0.4s ease-in-out; 
+}
+
+.img-hover-swap:hover .primary-img { opacity: 0; }
+.img-hover-swap:hover .secondary-img { opacity: 1; }
+
+.custom-badge{
+    font-size: 0.70rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.badge-new{
+    background-color: #B89047; 
+}
+
+.badge-hot{
+    background-color: #DA2F24; 
+}
+
+.product-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #333;
+    max-width: 32ch; /* Corta el texto a los ~32 caracteres (letras y espacios) */
+    margin-left: auto; /* Centra el texto */
+    margin-right: auto;
+    white-space: nowrap; /* Obliga a que sea una sola línea */
+    overflow: hidden; /* Oculta lo que sobra */
+    text-overflow: ellipsis; /* Agrega los "..." automáticamente al final */
+}
+
+.product-price {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.color-swatch {
+    width: 16px; 
+    height: 16px;
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    position: relative; 
+    overflow: hidden; 
+}
+
+.color-swatch.sold-out {
+    cursor: not-allowed;
+    opacity: 0.5; 
+}
+
+.color-swatch.sold-out::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 50%;
+    width: 1.5px;
+    height: 120%;
+    background-color: #ff0000; /* Línea roja diagonal */
+    transform: rotate(45deg); 
+    transform-origin: center;
+}
+
+.size-box {
+    display: inline-block;
+    font-size: 0.7rem;
+    color: #888;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    padding: 2px 6px;
+    cursor: pointer;
+    background: #fff;
+    transition: all 0.2s;
+}
+
+.size-box:not(.sold-out):hover {
+    border-color: #333;
+    color: #333;
+}
+
+.size-box.sold-out {
+    color: #d1d1d1; 
+    border-color: #eaeaea; 
+    cursor: not-allowed; 
+    background: 
+        linear-gradient(to top left, transparent 45%, #d1d1d1 48%, #d1d1d1 52%, transparent 55%),
+        linear-gradient(to top right, transparent 45%, #d1d1d1 48%, #d1d1d1 52%, transparent 55%);
+}
+
+/* ==========================================================================
+   FLECHAS DEL SLIDER DE PRODUCTOS (SOLO MÓVIL)
+========================================================================== */
+
+.prev-btn-drops, 
+.next-btn-drops,
+.prev-btn-top,
+.next-btn-top {
+    position: absolute !important;
+    top: 35% !important; /* Centrado respecto a la imagen, ignorando el texto inferior */
+    transform: translateY(-50%) !important;
+    width: 40px !important;
+    height: 40px !important;
+    background-color: #fff !important;
+    color: #333 !important;
+    border: 1px solid #eaeaea !important;
+    border-radius: 50% !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer;
+    z-index: 10 !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.65) !important;
+    padding: 0 !important;
+    transition: all 0.2s ease;
+}
+
+.prev-btn-drops:active, 
+.next-btn-drops:active,
+.prev-btn-top:active,
+.next-btn-top:active {
+    background-color: #fafafa !important;
+    color: #0F9D8A !important; /* Se pone color verde esmeralda/teal al tocar */
+}
+
+/* Posición a los lados */
+.prev-btn-drops,
+.prev-btn-top { left: -10px !important; }
+
+.next-btn-drops,
+.next-btn-top { right: -10px !important; }
+
+/* ==========================================================================
+   COMPORTAMIENTO RESPONSIVE Y ESCRITORIO
+========================================================================== */
+@media (min-width: 992px) {
+    .products-slider {
+        overflow-x: visible; 
+        justify-content: space-between; 
+    }
+    
+    .product-card {
+        flex: 0 0 calc(25% - 1.2rem); 
+    }
+
+    .product-card:hover .product-img-wrapper {
+        transform: translateY(-5px); 
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    }
+}
+
+@media (max-width: 576px) {
+    .new-drops-title {
+        font-size: 1.7rem; 
+    }
+    
+    .new-drops-btn {
+        padding: 6px 16px;
+        font-size: 0.95rem;
+    }
+}
+
+/* ==========================================================================
+   EFECTO AUTOMÁTICO DE IMÁGENES PARA CELULARES (PANTALLAS TÁCTILES)
+========================================================================== */
+@media (hover: none) {
+    
+    /* Animación para ocultar y mostrar la imagen Frontal */
+    @keyframes autoFadePrimary {
+        0%, 45% { opacity: 1; }      /* Visible la primera mitad del tiempo */
+        50%, 95% { opacity: 0; }     /* Oculta la segunda mitad */
+        100% { opacity: 1; }
+    }
+    
+    /* Animación para ocultar y mostrar la imagen de Espalda */
+    @keyframes autoFadeSecondary {
+        0%, 45% { opacity: 0; }      /* Oculta la primera mitad del tiempo */
+        50%, 95% { opacity: 1; }     /* Visible la segunda mitad */
+        100% { opacity: 0; }
+    }
+
+    /* Le aplicamos la animación a las imágenes (Dura 6 segundos y se repite infinito) */
+    .img-hover-swap .primary-img {
+        animation: autoFadePrimary 6s infinite ease-in-out;
+    }
+    
+    .img-hover-swap .secondary-img {
+        animation: autoFadeSecondary 6s infinite ease-in-out;
+    }
+}

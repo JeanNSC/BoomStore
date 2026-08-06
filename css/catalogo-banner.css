@@ -1,0 +1,52 @@
+/* ==========================================================================
+   BANNER PRINCIPAL DEL CATÁLOGO
+   ========================================================================== */
+
+/* Contenedor principal */
+.catalogo-hero {
+    height: 350px; /* Altura ideal para un banner interno en PC */
+    overflow: hidden;
+    background-color: #111111; /* Color de fondo mientras carga la imagen */
+}
+
+/* Imagen dinámica */
+.catalogo-hero-img {
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen llene el espacio sin deformarse */
+    object-position: top; /* Centra la imagen */
+}
+
+/* Sombra degradada inferior (Crucial para textos dinámicos) */
+.catalogo-hero-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%; /* Solo oscurece la mitad de abajo hacia arriba */
+    background: linear-gradient(to top, rgba(17, 17, 17, 0.85), transparent);
+    pointer-events: none; /* Permite hacer clic a través del gradiente si fuera necesario */
+}
+
+/* Estilo del título heredando la estética de Boom Store */
+.catalogo-hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 2px; /* Espaciado elegante entre letras */
+    text-transform: uppercase;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Refuerza la lectura del texto */
+    z-index: 2; /* Lo mantiene por encima del gradiente */
+    position: relative;
+    border-left: 6px solid #0F9D8A; /* Grosor y color de la línea */
+    padding-left: 18px; /* Espacio de separación entre la línea y la letra 'N' */
+    line-height: 1.1; /* Alinea perfectamente la altura de la línea con el texto */
+}
+
+/* --- Adaptación para celulares --- */
+@media (max-width: 768px) {
+    .catalogo-hero {
+        height: 220px; /* Banner más angosto en pantallas pequeñas */
+    }
+    .catalogo-hero-title {
+        font-size: 1.8rem; /* Texto proporcionado al celular */
+    }
+}

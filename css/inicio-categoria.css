@@ -1,0 +1,120 @@
+.categorias-section {
+    background-color: #ffffff;
+}
+
+.categorias-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #444444;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 16px; /* Espacio para la línea */
+    display: inline-block; /* Necesario para que la línea mida lo mismo que el texto */
+}
+
+/* Dibujamos la línea verde al centro */
+.categorias-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Centra la línea matemáticamente */
+    width: 50px;
+    height: 4px;
+    background-color: #0F9D8A; /* Color de tu marca */
+    border-radius: 2px;
+}
+
+/* --- Contenedor Base (Comportamiento Móvil por defecto) --- */
+.categorias-slider {
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory; 
+    padding-bottom: 20px; 
+    padding-top: 10px;
+    
+    /* Ocultar barra de desplazamiento nativa */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.categorias-slider::-webkit-scrollbar {
+    display: none;
+}
+
+/* --- Tarjeta Individual --- */
+.categoria-card {
+    flex: 0 0 240px; /* Ancho de la tarjeta en celular */
+    scroll-snap-align: center; 
+}
+
+.card-inner {
+    background-color: #fff;
+    border-radius: 12px;
+    border: 1px solid transparent; 
+    transition: all 0.3s ease;
+}
+
+/* Efecto Hover: Aparece el marco y un pequeño zoom a la imagen */
+.categoria-card:hover .cat-img {
+    transform: scale(1.03); 
+}
+
+/* --- Estilo de la Imagen y el Texto Inferior --- */
+.cat-img {
+    width: 100%;
+    height: auto; 
+    transition: transform 0.3s ease;
+    border-radius: 8px; 
+}
+
+/* ==========================================================================
+   BOTONES DE FLECHA (MÓVIL)
+   ========================================================================== */
+.btn-scroll {
+    position: absolute !important;
+    top: 45% !important; /* Centrado respecto a la imagen */
+    transform: translateY(-50%) !important;
+    width: 40px !important;
+    height: 40px !important;
+    background-color: #fff !important;
+    color: #333 !important;
+    border: 1px solid #eaeaea !important;
+    border-radius: 50% !important; /* Fuerza a que sea un círculo perfecto */
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer;
+    z-index: 10 !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.65) !important;
+    padding: 0 !important;
+    transition: all 0.2s ease;
+}
+
+.btn-scroll:active {
+    background-color: #fafafa !important;
+    color: #0F9D8A !important; /* Fucsia al tocar */
+}
+
+/* Posicionamiento a los bordes */
+.prev-btn { left: -10px !important; }
+.next-btn { right: -10px !important; }
+
+
+/* ==========================================================================
+   COMPORTAMIENTO EN MODO ESCRITORIO (PC)
+   ========================================================================== */
+@media (min-width: 992px) {
+    .categorias-slider {
+        overflow-x: visible; /* Apagamos el scroll */
+        justify-content: center; /* Centramos las 4 tarjetas horizontalmente */
+    }
+    
+    .categoria-card {
+        flex: 0 0 250px; /* Ancho fijo para las 4 tarjetas en PC */
+    }
+
+    .title-categoria{
+        font-size: 1.7rem; 
+        color: #444;
+    }
+}

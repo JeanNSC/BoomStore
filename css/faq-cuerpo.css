@@ -1,0 +1,54 @@
+/* ==========================================================================
+   ESTILOS PARA EL ACORDEÓN DE PREGUNTAS FRECUENTES (FAQ)
+========================================================================== */
+.custom-accordion .accordion-item {
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    border-radius: 0;
+}
+
+.custom-accordion .accordion-button {
+    background-color: transparent !important;
+    color: #000;
+    font-weight: 600;
+    padding: 1.5rem 1rem;
+    box-shadow: none !important;
+    font-size: 1.05rem;
+}
+
+/* Ocultar la flecha por defecto de Bootstrap a la derecha */
+.custom-accordion .accordion-button::after {
+    display: none;
+}
+
+/* Crear el icono de + a la izquierda */
+.custom-accordion .accordion-button::before {
+    content: '\002B'; /* Símbolo de más (+) */
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 15px;
+    color: #000;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Cambiar el icono a - y pintar el texto de rojo cuando está abierto */
+.custom-accordion .accordion-button:not(.collapsed) {
+    color: #e60000 !important; /* Rojo estilo Akira Seihin */
+}
+
+.custom-accordion .accordion-button:not(.collapsed)::before {
+    content: '\2212'; /* Símbolo de menos (-) */
+    color: #e60000 !important;
+}
+
+.custom-accordion .accordion-body {
+    padding: 0 1rem 1.5rem 3.2rem; /* El left-padding alinea el texto esquivando el icono */
+    color: #666; /* Gris oscuro para las respuestas */
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+.btn-dark:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2) !important;
+}

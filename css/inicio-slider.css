@@ -1,0 +1,42 @@
+/* ==========================================================================
+   ESTILOS DEL SLIDER PRINCIPAL
+   ========================================================================== */
+
+/* Contenedor principal */
+.slider-section {
+    position: relative;
+    /* Damos espacio debajo del slider para que los puntos tengan dónde vivir sin cortar otros elementos */
+    padding-bottom: 45px; 
+    background-color: #ffffff; /* Asegura que el fondo donde caen los puntos sea blanco */
+}
+
+/* ==================== INDICADORES (DOTS) ==================== */
+
+.custom-indicators {
+    bottom: -40px !important; /* Saca los puntos fuera de la imagen hacia abajo */
+    margin-bottom: 0 !important;
+    gap: 10px; /* Separación entre cada punto */
+    align-items: center; /* Alinea verticalmente los círculos con el óvalo */
+}
+
+/* Estado INACTIVO (Círculos grises) */
+.custom-indicators button {
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 50% !important; /* Los hace completamente circulares */
+    background-color: #d3d3d3 !important; /* Gris claro de tu imagen */
+    border: none !important;
+    opacity: 1 !important; /* Quitamos la semitransparencia nativa de Bootstrap */
+    
+    /* Animación fluida para cuando crecen/se encogen */
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !important; 
+    margin: 0 !important; /* Limpiamos márgenes nativos para usar 'gap' */
+}
+
+/* Estado ACTIVO (Píldora Fucsia) */
+.custom-indicators button.active {
+    width: 32px !important; /* Se estira a lo ancho */
+    height: 12px !important; /* Mantiene la misma altura */
+    border-radius: 10px !important; /* Se vuelve una píldora (ovalado) */
+    background-color: #0F9D8A!important; /* Tu fucsia de Boom Store */
+}

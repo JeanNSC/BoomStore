@@ -1,0 +1,104 @@
+/* ==========================================================================
+   FOOTER (PIE DE PÁGINA)
+========================================================================== */
+
+/* Fondo oscuro del Footer */
+.custom-footer {
+    background-color: #f8f9fa; /* Gris súper clarito, casi blanco */
+    color: #444444; 
+}
+
+/* --- Logo --- */
+.footer-logo {
+    max-width: 260px; /* Ajusta este valor según el tamaño de tu logo */
+    transition: transform 0.3s ease;
+}
+
+.footer-logo:hover {
+    transform: scale(1.05);
+}
+
+/* --- Navegación Central --- */
+.footer-nav a {
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a, .accent-text{
+    color: #111111; /* Textos en negro */
+}
+
+.footer-nav a:hover {
+    color: #666666;
+    text-decoration: underline;
+}
+
+
+.footer-nav .separator {
+    color: #e0e0e0;
+    margin: 0 6px;
+    font-weight: 300;
+}
+
+/* --- Textos de Copyright --- */
+.footer-copy, 
+.footer-credits {
+    font-size: 0.85rem;
+    color: #b0b0b0;
+}
+
+.accent-text,
+.accent-heart {
+    font-weight: 600;
+}
+
+.accent-heart {
+    color: #C34C45; /* Textos en negro */
+}
+
+.accent-heart {
+    animation: palpitar 1.5s infinite; /* Un pequeño detalle: el corazón late */
+}
+
+@keyframes palpitar {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* --- Botones de Redes Sociales --- */
+.footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background-color: #111111; /* Botones negros sólidos */
+    color: #ffffff; 
+    border-radius: 50%; /* Los hace círculos perfectos */
+    margin-left: 10px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* En celulares, cambiamos el margen para que queden centrados y separados por igual */
+@media (max-width: 768px) {
+    .footer-social a {
+        margin: 0 8px; 
+    }
+}
+
+.footer-social a:hover {
+    background-color: #333333;
+    transform: translateY(-5px); /* Flotan hacia arriba al pasar el mouse */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); 
+}
+
+.footer-social a:hover {
+    background-color: #333333;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); 
+}
+

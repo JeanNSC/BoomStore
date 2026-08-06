@@ -1,0 +1,25 @@
+/* ==========================================================================
+   ESTILOS PARA PESTAÑAS DE TALLAS
+   ========================================================================== */
+.custom-tallas-tabs {
+    border-bottom: 3px solid #2d2d2d !important; /* La línea gruesa oscura */
+    gap: 2rem; /* Separación entre botones */
+}
+
+.custom-tallas-tabs .nav-link {
+    border: none !important;
+    background: transparent !important;
+    color: #a3a3a3; /* Color gris para el texto inactivo */
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.custom-tallas-tabs .nav-link:hover {
+    color: #555;
+}
+
+.custom-tallas-tabs .nav-link.active {
+    color: #2d2d2d !important; /* Color negro/oscuro para el texto activo */
+}

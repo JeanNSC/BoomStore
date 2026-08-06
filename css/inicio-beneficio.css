@@ -1,0 +1,27 @@
+/* ==========================================================================
+   SECCIÓN BENEFICIOS (TARJETAS IMAGEN)
+   ========================================================================== */
+
+.beneficio-card {
+    border-radius: 12px; /* Redondea las esquinas para dar aspecto de tarjeta */
+    transition: box-shadow 0.3s ease; /* Transición suave para la sombra */
+}
+
+.beneficio-img {
+    transition: transform 0.4s ease; /* Transición suave para el zoom de la imagen */
+    object-fit: cover;
+    border-radius: 12px; /* Asegura que la imagen respete los bordes redondeados */
+}
+
+/* --- Efecto interactivo solo para PC (Hover) --- */
+@media (min-width: 992px) {
+    .beneficio-card:hover {
+        /* Aumenta la sombra para que parezca que la tarjeta "flota" */
+        box-shadow: 0 12px 24px rgba(0,0,0,0.15) !important; 
+    }
+    
+    .beneficio-card:hover .beneficio-img {
+        /* Hace un pequeño zoom hacia adelante */
+        transform: scale(1.05); 
+    }
+}

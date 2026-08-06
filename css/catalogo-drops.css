@@ -1,0 +1,64 @@
+/* Anula el ancho fijo del slider para que las tarjetas ocupen toda su columna en el catálogo */
+.catalogo-main .product-card {
+    flex: auto !important; 
+    scroll-snap-align: none;
+}
+
+/* ==========================================================================
+   EFECTOS HOVER (LEVANTAMIENTO / LEVITACIÓN)
+   ========================================================================== */
+
+/* 1. Efecto para las tarjetas de producto */
+.tarjet-icon-link{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px; /* Un ligero borde redondeado ayuda a que la sombra se vea mejor */
+}
+
+.tarjet-icon-link:hover {
+    transform: translateY(-10px); /* Mueve la tarjeta 10 píxeles hacia arriba */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12); /* Crea una sombra suave debajo */
+}
+
+/* 2. Efecto para los íconos de redes sociales */
+.social-icon-link img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-icon-link:hover img {
+    transform: translateY(-6px) scale(1.05); /* Se levanta 6px y crece un 5% */
+    filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.2)); /* drop-shadow es ideal para imágenes PNG/sin fondo */
+}
+
+/* ==========================================================================
+   DISEÑO DE LA PAGINACIÓN
+   ========================================================================== */
+.custom-pagination {
+    display: flex;
+    gap: 8px; /* Espacio entre los números */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.custom-pagination li .page-btn {
+    background-color: transparent;
+    color: #111;
+    border: none;
+    font-size: 1rem;
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* El botón activo (Fucsia/Rosa) */
+.custom-pagination li.active .page-btn {
+    background-color: #0F9D8A; /* El fucsia de Boom Store */
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.custom-pagination li .page-btn:hover:not(.active) {
+    background-color: #f0f0f0; /* Efecto al pasar el mouse por los inactivos */
+    color: #222;
+}

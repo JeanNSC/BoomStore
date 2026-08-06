@@ -1,0 +1,39 @@
+/* ==========================================================================
+   ESTILOS PÁGINA "NOSOTROS"
+========================================================================== */
+
+/* Efecto hover suave para las tarjetas de Pilares */
+.tarjeta-pilar {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.tarjeta-pilar:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08) !important;
+    border-color: rgba(15, 157, 138, 0.2); /* Borde sutil del color principal */
+}
+
+/* Grilla tipo Redes Sociales (Detrás de Escena) */
+.redes-item img {
+    transition: transform 0.4s ease;
+}
+
+.redes-overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.redes-item:hover img {
+    transform: scale(1.08); /* Zoom in a la imagen */
+}
+
+.redes-item:hover .redes-overlay {
+    opacity: 1; /* Aparece el ícono oscuro al poner el mouse */
+}
+
+/* Ajuste de aspecto para asegurar que todas las fotos de la grilla sean iguales */
+.object-fit-cover {
+    object-fit: cover;
+}

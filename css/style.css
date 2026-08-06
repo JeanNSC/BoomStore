@@ -1,0 +1,62 @@
+/* ==========================================================================
+   ESTILOS GLOBALES / RESET BÁSICO
+   ========================================================================== */
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* Enlaces globales */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+/* Imágenes responsive por defecto */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ==========================================================================
+   PERSONALIZACIÓN DE LA BARRA DE DESPLAZAMIENTO (SCROLLBAR)
+   ========================================================================== */
+
+/* 1. Para navegadores Firefox */
+html {
+    scrollbar-width: thin; 
+    scrollbar-color: #0F9D8A #111111; /* Color verde/teal y fondo oscuro */
+}
+
+/* 2. Para Chrome, Edge, Safari y Opera */
+::-webkit-scrollbar {
+    width: 10px; 
+    height: 10px; 
+}
+
+/* El fondo por donde se desliza la barra */
+::-webkit-scrollbar-track {
+    background: #111111; /* Negro profundo */
+}
+
+/* La barra deslizadora en sí */
+::-webkit-scrollbar-thumb {
+    background: #0F9D8A; /* Tu color principal */
+    border-radius: 6px;  
+}
+
+/* Cuando el usuario pasa el cursor por encima de la barra */
+::-webkit-scrollbar-thumb:hover {
+    background: #0B7A6B; /* Un tono un poco más oscuro al hacer hover */
+}

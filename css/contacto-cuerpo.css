@@ -1,0 +1,29 @@
+/* Efecto hover para las imágenes de redes sociales en Contacto */
+.red-social-img img {
+    transition: transform 0.3s ease;
+}
+
+.red-social-img:hover img {
+    transform: translateY(-5px) scale(1.05);
+}
+
+/* ==========================================================================
+   FONDO PARA SECCIÓN DE HORARIOS Y UBICACIÓN
+========================================================================== */
+/* 1. Estilos base y fondo para PC (Pantallas grandes) */
+.seccion-info-fondo {
+    background-image: url('../img/fondo-contacto.svg'); /* <--- Imagen horizontal para PC */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-color: #f8f9fa; 
+}
+
+/* 2. Cambio de fondo SOLO para Celulares (Pantallas pequeñas) */
+@media (max-width: 767.98px) {
+    .seccion-info-fondo {
+        background-image: url('../img/fondo-contacto-movil.svg'); /* <--- Imagen vertical para Celular */
+        /* Si tu imagen de celular necesita ajustes distintos, puedes agregarlos aquí: */
+        /* background-position: top center; */
+    }
+}
