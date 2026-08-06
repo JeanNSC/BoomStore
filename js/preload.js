@@ -13,7 +13,7 @@ window.addEventListener('load', function() {
     const tiempoTranscurrido = Date.now() - tiempoInicio;
         
     // Establecemos nuestro tiempo mínimo en milisegundos (3 segundos = 3000ms)
-    const tiempoMinimo = 3000; 
+    const tiempoMinimo = 2000; 
         
     // Calculamos si necesitamos esperar tiempo extra
     // (Si el tiempo transcurrido es menor a 3000, calculamos la diferencia. Si es mayor, es 0)
